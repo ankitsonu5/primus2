@@ -1,0 +1,11 @@
+/* howitbeginsec style start */
+#howitbeginsec {
+
+}
+#howitbeginsec .howitbegincont {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 0;
+}
+/* howitbeginsec style end */
