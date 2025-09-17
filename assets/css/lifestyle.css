@@ -1,0 +1,23 @@
+/*A day in life start*/
+
+.container {
+    width: 100%;
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.a-day-in-life {
+    width: 745px;
+}
+
+.every-day-at {
+    width: 585px;
+}
+
+/*A day in life end*/
