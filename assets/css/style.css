@@ -40,12 +40,12 @@ body {
 
 /* Banner */
 .banner {
-  position: relative;
+  /* position: relative; */
   padding-top: 30px;
 }
 
 .bannerimg {
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   z-index: -1;
 }
@@ -70,7 +70,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .menu ul li {
