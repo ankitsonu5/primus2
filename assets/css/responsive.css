@@ -15,8 +15,6 @@
  /* Desktops and up */
  @media (min-width: 1200px) {
    /* optional refinements */
-
-
  }
 
  /* Large desktops (1440+) */
@@ -29,8 +27,6 @@
    .navbar {
      max-width: 1120px;
    }
-
-
  }
 
  /* Ultra-wide (≥1920px): only if you really want wider content */
@@ -45,11 +41,8 @@
    }
 
    .menu ul li a {
-
      font-size: 15px;
-
      margin: 0 12px;
      letter-spacing: 0%;
-
    }
  }
