@@ -1,75 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0823a66b46.js" crossorigin="anonymous"></script>
     <title>Primus</title>
- <!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
+
 <body>
     <div class="main-container">
         <section id="header" class="home-header">
-                <div class="banner"> 
-                    <div class="bannerimg">
-                        <img src="./assets/images/bannerimg.png"/>
-                    </div>
+            <div class="banner">
+                <div class="bannerimg">
+                    <img src="./assets/images/bannerimg.png" />
+                </div>
+            </div>
+
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./assets/images/primus-logo.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Communities </a></li>
+                        <li><a href="#">The Primus Lifestyle</a></li>
+                        <li><a href="#">Living Well Hub</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Contact Us </a></li>
+                    </ul>
                 </div>
 
-                <div class="navbar">
-                    <div class="logo">
-                        <img src="./assets/images/primus-logo.png" alt="logo">
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Communities </a></li>
-                            <li><a href="#">The Primus Lifestyle</a></li>
-                            <li><a href="#">Living Well Hub</a></li>
-                            <li><a href="#">Partner With Us</a></li>
-                            <li><a href="#">Contact Us </a></li>
-                        </ul>
-                    </div>
-            
 
                 <div class="enquiry-wrap">
-    <details class="enquiry">
-      <summary>
-        ENQUIRY
-        <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-      </summary>
+                    <details class="enquiry">
+                        <summary>
+                            ENQUIRY
+                            <svg class="caret" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
 
-      <ul class="enquiry-menu" role="menu" aria-label="Enquiry options">
-        <li role="menuitem"><a href="email">EMAIL</a></li>
-        <li role="menuitem"><a href="whatsapp">WHATSAPP</a></li>
-        <li role="menuitem"><a href="form">FORM</a></li>
-      </ul>
-    </details>
-  </div>
+                        <ul class="enquiry-menu" role="menu" aria-label="Enquiry options">
+                            <li role="menuitem"><a href="email">EMAIL</a></li>
+                            <li role="menuitem"><a href="whatsapp">WHATSAPP</a></li>
+                            <li role="menuitem"><a href="form">FORM</a></li>
+                        </ul>
+                    </details>
                 </div>
-         
-         
+            </div>
+
+
         </section>
- 
+
     </div>
 
     <!-- Explore Our Communities start -->
-     <section class="exploreourcommunitiessec">
+    <section class="exploreourcommunitiessec">
         <div class="exploreourcommunitiescont main-container">
             <div class="exploreourcommunitieshead">
                 <h1>Explore Our Communities</h1>
             </div>
-            <div class="exploreourcommunitiestabs">
-                
+            <div class="tabs-container">
+                <div class="tabs">
+                    <div class="tab-indicator"></div>
+                    <button class="tab active" data-slide="0">SENIOR LIVING</button>
+                    <button class="tab" data-slide="1">MULTIGENERATIONAL LIVING</button>
+                    <button class="tab" data-slide="2">ALL REGIONS <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide slide-1">
+                        <div><img src="./assets/images/Home/explore-community.png" alt=""></div>
+                        <div class="textcontslider">
+                            <h1>Hello</h1>
+                            <p>Where generations converge in independent homes, shared spaces, and seamless care</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
+                            <a href="">KNOW MORE</a>
+                        </div>
+                    </div>
+                    <div class="slide slide-1">
+                        <div><img src="./assets/images/Home/explore-community.png" alt=""></div>
+                        <div class="textcontslider">
+                            <h1>Hello</h1>
+                            <p>Where generations converge in independent homes, shared spaces, and seamless care</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
+                            <a href="">KNOW MORE</a>
+                        </div>
+                    </div>
+                    <div class="slide slide-1">
+                        <div><img src="./assets/images/Home/explore-community.png" alt=""></div>
+                        <div class="textcontslider">
+                            <h1>Hello</h1>
+                            <p>Where generations converge in independent homes, shared spaces, and seamless care</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
+                            <a href="">KNOW MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dots-container">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
             </div>
         </div>
-     </section>
+    </section>
     <!-- Explore Our Communities end -->
 
+<!-- Backed by Visionaries. start -->
+    <section id="backedbyvisionariessec">
+        <div class="backedbyvisionariescont main-container">
+            <div class="backedbyvisionariestext">
+                <h1>Led by a Pioneer.
+Backed by Visionaries.</h1>
+                    <p>Primus was founded by Adarsh Narahari, India’s leading voice in senior living. With over a decade of experience designing care-forward communities, Adarsh has helped redefine what it means to age well in India</p>
+                    <p> Today, Primus is backed by some of the world’s most forward-thinking investors, including General Catalyst (the force behind The Villages, the world's largest retirement community in the US) and Nikhil Kamath, one of India's most respected entrepreneurs.</p>
+            </div>
+            <div class="backedbyvisionariesimg">
+                <img src="./assets/images/Home/backedbyvisionariesbg.png" alt="">
+                <img src="./assets/images/Home/backedbyvisionariesimg.png" alt="">
+            </div>
+        </div>
+        </section>
+<!-- Backed by Visionaries. end -->
+
+    <!-- primus video section start -->
+    <section id="primusvideosec">
+        <div class="primusvideocont main-container">
+            <div class="primusvideocontcontainer">
+                <div class="videosecdiv">
+                    <video src="./assets/images/Home/Luxury retirement homes.mp4" muted loop autoplay></video>
+                </div>
+                <div class="videosecdiv">
+                    <video src="./assets/images/Home/2.mp4" muted loop autoplay></video>
+                </div>
+                <div class="videosecdiv">
+                    <video src="./assets/images/Home/3.mp4" muted loop autoplay></video>
+                </div>
+                <div class="videosecdiv">
+                    <video src="./assets/images/Home/5.mp4" muted loop autoplay></video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- primus video section end -->
+
+
+
+    
+    <!-- Explore the page tabs script code -->
+    <script>
+        class TabSlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 4;
+                this.init();
+            }
+
+            init() {
+                this.sliderWrapper = document.querySelector('.slider-wrapper');
+                this.tabs = document.querySelectorAll('.tab');
+                this.dots = document.querySelectorAll('.dot');
+                this.tabIndicator = document.querySelector('.tab-indicator');
+
+                this.bindEvents();
+                this.updateTabIndicator();
+            }
+
+            bindEvents() {
+                // Tab click events
+                this.tabs.forEach((tab, index) => {
+                    tab.addEventListener('click', () => {
+                        this.goToSlide(index);
+                    });
+                });
+
+                // Dot click events
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.goToSlide(index);
+                    });
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        this.previousSlide();
+                    } else if (e.key === 'ArrowRight') {
+                        this.nextSlide();
+                    }
+                });
+
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+
+                this.sliderWrapper.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                this.sliderWrapper.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    this.handleSwipe();
+                });
+
+                this.sliderWrapper.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    this.sliderWrapper.style.cursor = 'grabbing';
+                });
+
+                this.sliderWrapper.addEventListener('mouseup', (e) => {
+                    endX = e.clientX;
+                    this.handleSwipe();
+                    this.sliderWrapper.style.cursor = 'grab';
+                });
+
+                const handleSwipe = () => {
+                    const threshold = 50;
+                    const diff = startX - endX;
+
+                    if (Math.abs(diff) > threshold) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.previousSlide();
+                        }
+                    }
+                };
+
+                this.handleSwipe = handleSwipe;
+            }
+
+            goToSlide(index) {
+                if (index === this.currentSlide) return;
+
+                this.currentSlide = index;
+                this.updateSlider();
+                this.updateTabs();
+                this.updateDots();
+                this.updateTabIndicator();
+                this.triggerSlideAnimation();
+            }
+
+            nextSlide() {
+                const next = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(next);
+            }
+
+            previousSlide() {
+                const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.goToSlide(prev);
+            }
+
+            updateSlider() {
+                const translateX = -this.currentSlide * 100;
+                this.sliderWrapper.style.transform = `translateX(${translateX}%)`;
+            }
+
+            updateTabs() {
+                this.tabs.forEach((tab, index) => {
+                    tab.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            updateTabIndicator() {
+                const activeTab = this.tabs[this.currentSlide];
+                const tabWidth = activeTab.offsetWidth;
+                const tabLeft = activeTab.offsetLeft;
+
+                this.tabIndicator.style.width = `${tabWidth}px`;
+                this.tabIndicator.style.transform = `translateX(${tabLeft}px)`;
+            }
+
+            triggerSlideAnimation() {
+                const currentSlideElement = document.querySelectorAll('.slide')[this.currentSlide];
+                const elements = currentSlideElement.querySelectorAll('h2, p, .slide-icon');
+
+                elements.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; // Trigger reflow
+                    el.style.animation = null;
+                });
+            }
+        }
+
+        // Initialize the tab slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new TabSlider();
+        });
+
+        // Auto-play functionality (optional - uncomment to enable)
+        /*
+        setInterval(() => {
+            if (document.querySelector('.container:hover') === null) {
+                tabSlider.nextSlide();
+            }
+        }, 5000);
+        */
+    </script>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs with Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        } */
+
+        .tabs-container {
+            margin-bottom: 30px;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 50px;
+            padding: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 500;
+            color: #6c757d;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tab.active {
+            color: white;
+        }
+
+        .tab-indicator {
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 45px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide {
+            min-width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 0.6s ease forwards;
+        }
+
+        .slide p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 0.6s ease 0.2s forwards;
+        }
+
+        .slide.slide-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .slide.slide-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .slide.slide-4 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dot.active {
+            background: #667eea;
+            transform: scale(1.2);
+        }
+
+        .dot::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dot.active::after {
+            opacity: 1;
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: scaleIn 0.6s ease 0.1s forwards;
+        }
+
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .slide {
+                padding: 40px 20px;
+            }
+
+            .slide h2 {
+                font-size: 2rem;
+            }
+
+            .slide p {
+                font-size: 1rem;
+            }
+
+            .tab {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container"> -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab-indicator"></div>
+                <button class="tab active" data-slide="0">Home</button>
+                <button class="tab" data-slide="1">About</button>
+                <button class="tab" data-slide="2">Services</button>
+                <button class="tab" data-slide="3">Contact</button>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slide slide-1">
+                    <div class="slide-icon">🏠</div>
+                    <h2>Welcome Home</h2>
+                    <p>Experience the perfect blend of comfort and innovation. Our platform brings together cutting-edge technology with user-friendly design to create something truly special for you and your family.</p>
+                </div>
+                <div class="slide slide-2">
+                    <div class="slide-icon">👥</div>
+                    <h2>About Us</h2>
+                    <p>We are passionate creators dedicated to building meaningful connections through technology. Our team combines years of experience with fresh perspectives to deliver exceptional solutions.</p>
+                </div>
+                <div class="slide slide-3">
+                    <div class="slide-icon">⚡</div>
+                    <h2>Our Services</h2>
+                    <p>From web development to digital marketing, we offer comprehensive solutions tailored to your needs. Let us help you transform your ideas into reality with our expertise and creativity.</p>
+                </div>
+                <div class="slide slide-4">
+                    <div class="slide-icon">📞</div>
+                    <h2>Get In Touch</h2>
+                    <p>Ready to start your journey with us? We'd love to hear from you. Reach out today and let's discuss how we can bring your vision to life together.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dots-container">
+            <div class="dot active" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+            <div class="dot" data-slide="3"></div>
+        </div>
+    <!-- </div> -->
+
+    <script>
+        class TabSlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 4;
+                this.init();
+            }
+
+            init() {
+                this.sliderWrapper = document.querySelector('.slider-wrapper');
+                this.tabs = document.querySelectorAll('.tab');
+                this.dots = document.querySelectorAll('.dot');
+                this.tabIndicator = document.querySelector('.tab-indicator');
+                
+                this.bindEvents();
+                this.updateTabIndicator();
+            }
+
+            bindEvents() {
+                // Tab click events
+                this.tabs.forEach((tab, index) => {
+                    tab.addEventListener('click', () => {
+                        this.goToSlide(index);
+                    });
+                });
+
+                // Dot click events
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.goToSlide(index);
+                    });
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        this.previousSlide();
+                    } else if (e.key === 'ArrowRight') {
+                        this.nextSlide();
+                    }
+                });
+
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+
+                this.sliderWrapper.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                this.sliderWrapper.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    this.handleSwipe();
+                });
+
+                this.sliderWrapper.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    this.sliderWrapper.style.cursor = 'grabbing';
+                });
+
+                this.sliderWrapper.addEventListener('mouseup', (e) => {
+                    endX = e.clientX;
+                    this.handleSwipe();
+                    this.sliderWrapper.style.cursor = 'grab';
+                });
+
+                const handleSwipe = () => {
+                    const threshold = 50;
+                    const diff = startX - endX;
+
+                    if (Math.abs(diff) > threshold) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.previousSlide();
+                        }
+                    }
+                };
+
+                this.handleSwipe = handleSwipe;
+            }
+
+            goToSlide(index) {
+                if (index === this.currentSlide) return;
+
+                this.currentSlide = index;
+                this.updateSlider();
+                this.updateTabs();
+                this.updateDots();
+                this.updateTabIndicator();
+                this.triggerSlideAnimation();
+            }
+
+            nextSlide() {
+                const next = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(next);
+            }
+
+            previousSlide() {
+                const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.goToSlide(prev);
+            }
+
+            updateSlider() {
+                const translateX = -this.currentSlide * 100;
+                this.sliderWrapper.style.transform = `translateX(${translateX}%)`;
+            }
+
+            updateTabs() {
+                this.tabs.forEach((tab, index) => {
+                    tab.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            updateTabIndicator() {
+                const activeTab = this.tabs[this.currentSlide];
+                const tabWidth = activeTab.offsetWidth;
+                const tabLeft = activeTab.offsetLeft;
+                
+                this.tabIndicator.style.width = `${tabWidth}px`;
+                this.tabIndicator.style.transform = `translateX(${tabLeft}px)`;
+            }
+
+            triggerSlideAnimation() {
+                const currentSlideElement = document.querySelectorAll('.slide')[this.currentSlide];
+                const elements = currentSlideElement.querySelectorAll('h2, p, .slide-icon');
+                
+                elements.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; // Trigger reflow
+                    el.style.animation = null;
+                });
+            }
+        }
+
+        // Initialize the tab slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new TabSlider();
+        });
+
+        // Auto-play functionality (optional - uncomment to enable)
+        /*
+        setInterval(() => {
+            if (document.querySelector('.container:hover') === null) {
+                tabSlider.nextSlide();
+            }
+        }, 5000);
+        */
+    </script>
+</body>
+</html>
