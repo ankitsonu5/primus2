@@ -149,7 +149,7 @@
     font-family: Montserrat;
     font-weight: 700;
     font-style: Bold;
-    font-size: 70px;
+    font-size: 65px;
     line-height: 85px;
     letter-spacing: -5%;
     color: #801B53;
@@ -205,8 +205,10 @@
 
 /*Hear it from end*/
 
-
 @media screen and (min-width: 1366px) and (max-width:1920px) {
+
+
+
     /*A day in life start*/
 
     .adayinlife {
@@ -367,6 +369,14 @@
 
 
 @media screen and (min-width: 768px) and (max-width: 1365px) {
+
+    #header-mobile {
+        display: none;
+    }
+
+    #talk-to-us-mob {
+        display: none;
+    }
 
     /*A day in life start*/
 
@@ -550,6 +560,186 @@
     .livesenior-1 img {
         max-width: 100%;
         border-radius: 25px;
+    }
+
+    /*Hear it from end*/
+}
+
+@media screen and (min-width: 768px) {
+    #header-mobile {
+        display: none;
+    }
+
+    #talk-to-us-mob {
+        display: none;
+    }
+
+    .hearitfrommob p {
+        display: none;
+    }
+
+    .fromfestive-txt-mob p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        display: none;
+    }
+
+    #talk-to-us {
+        display: none;
+    }
+
+    .hearitfrom p {
+        display: none;
+    }
+
+    .fromfestive-txt p {
+        display: none;
+    }
+
+    #header-mobile {
+        margin-top: 15px;
+    }
+
+    #header-mobile img {
+        width: 100%;
+    }
+
+    /*A day in life start*/
+
+    .adayinlife {
+        gap: 30px;
+        margin-top: 72px;
+    }
+
+    .adayinlife {
+        flex-direction: column;
+        align-items: start;
+
+    }
+
+    .a-day-in-life h1 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: -5%;
+    }
+
+    .everydayat {
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 23px;
+        line-height: 25px;
+    }
+
+    /*A day in life end*/
+
+
+    /*Talk to us start*/
+    .talktoustxtmobile {
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .talktousimgmob img {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .talktousbtnmob button {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 20px;
+        line-height: 25px;
+        color: #fff;
+        padding: 8px 15px;
+        text-align: center;
+        background: #801B53;
+        border: 1px solid #801B53;
+        border-radius: 15px;
+        width: 185px;
+        cursor: pointer;
+        margin-top: 25px;
+    }
+
+    /*Talk to us end*/
+
+    /*From festive start*/
+
+    #fromfestive {
+        margin-top: 40px;
+    }
+
+    .from-festive {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .fromfestive-txt h1 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: -5%;
+        color: #801B53;
+    }
+
+    .fromfestive-txt-mob p {
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 22px;
+        line-height: 25px;
+        margin-top: 22px;
+    }
+
+
+    .fromfestive-img img {
+        width: 100%;
+    }
+
+    /*From festive end*/
+
+    /*Hear it from start*/
+    #hear-it-from {
+        margin-top: 62px;
+    }
+
+    .hearitfrom h1 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: -5%;
+        text-align: left;
+        color: #801B53;
+    }
+
+    .hearitfrommob p {
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 22px;
+        line-height: 25px;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .live-senior {
+        display: none;
     }
 
     /*Hear it from end*/
