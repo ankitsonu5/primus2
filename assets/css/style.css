@@ -35,13 +35,13 @@ body {
 
 /* Header */
 #header {
-  margin: 30px 0;
+  margin: 23px 0;
 }
 
 /* Banner */
 .banner {
   /* position: relative; */
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 
 .bannerimg {
@@ -71,7 +71,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -89,8 +89,44 @@ body {
   font-weight: 500;
   font-style: Medium;
   font-size: 14px;
-
-
   letter-spacing: 0%;
+}
 
+
+/* Explore Our Communities style start */
+.exploreourcommunitieshead {
+padding-bottom: 3rem;
+}
+.exploreourcommunitieshead h1 {
+font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 80px;
+line-height: 90px;
+letter-spacing: -5%;
+text-align: center;
+color: #801B53;
+margin-bottom: 5rem;
+}
+/* Explore Our Communities style end */
+
+
+.only-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .only-mobile {
+    display: block !important;
+  }
+}
+
+.only-desktop {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .only-desktop {
+    display: none !important;
+  }
 }
