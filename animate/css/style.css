@@ -89,26 +89,11 @@ body {
   font-weight: 500;
   font-style: Medium;
   font-size: 14px;
+
+
   letter-spacing: 0%;
-}
 
-
-/* Explore Our Communities style start */
-.exploreourcommunitieshead {
-padding-bottom: 3rem;
 }
-.exploreourcommunitieshead h1 {
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
-font-size: 80px;
-line-height: 90px;
-letter-spacing: -5%;
-text-align: center;
-color: #801B53;
-margin-bottom: 5rem;
-}
-/* Explore Our Communities style end */
 
 
 .only-mobile {
