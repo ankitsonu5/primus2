@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primus - About</title>
-    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/about.css">
 </head>
 
 <body>
-    <div class="main-container" style="display: none;">
+    <div class="main-container">
         <section id="header" class="home-header">
             <div class="banner">
                 <div class="bannerimg">
-                    <img src="./assets/images/bannerimg.png" />
+                    <img src="./assets/images/About/banner2.png" />
                 </div>
             </div>
 
@@ -37,13 +37,21 @@
                 </div>
 
 
-                <div class="dropdown dropdown-enquiry">
-                    <select class="form-select">
-                        <option selected>Enquiry</option>
-                        <option value="email">email</option>
-                        <option value="email">whatsapp</option>
-                        <option value="email">form</option>
-                    </select>
+                  <div class="enquiry-wrap">
+                    <details class="enquiry">
+                        <summary>
+                            ENQUIRY
+                            <svg class="caret" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+
+                        <ul class="enquiry-menu" role="menu" aria-label="Enquiry options">
+                            <li role="menuitem"><a href="email">EMAIL</a></li>
+                            <li role="menuitem"><a href="whatsapp">WHATSAPP</a></li>
+                            <li role="menuitem"><a href="form">FORM</a></li>
+                        </ul>
+                    </details>
                 </div>
             </div>
         </section>
