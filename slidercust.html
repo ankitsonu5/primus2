@@ -26,45 +26,79 @@
             display: flex;
         }
 
-        /* multigenerationalsec style start */
-
-        .croousel-container {
+        /*A Peekk Into Our Celebrations style start */
+        #apeeksec {
+            /* padding: 5rem !important; */
             background: #801B53;
+            margin-bottom: 8rem;
+            margin-top: 120px;
+        }
+
+        #apeeksec .multigenerationalcont {
+            /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10rem 0; */
+            display: flex;
+            padding: 10rem 0;
+        }
+
+        .multigenerationalsecone {
+            /* flex: 2; */
+            width: 30%;
         }
 
         .multigenerationalsectwo {
             /* flex: 1; */
-            /* width: 60%; */
-            display: flex;
-            justify-content: center;
-            gap: 100px;
-            margin: 5rem 0rem;
-            padding: 20px;
+            width: 70%;
         }
 
-        #multigenerationalsec .multigenerationalsecone {
+        #apeeksec .multigenerationalsecone {
             border-right: 1px solid #fff;
         }
 
-        #multigenerationalsec .multigenerationalsectwo .secboxdiv:not(:last-child) {
-            border-right: 1px solid #fff;
+        #apeeksec .multigenerationalsecone h1 {
+            margin-bottom: 2rem;
+            color: #fff;
+            padding-right: 3rem;
+            font-size: 3rem;
+            line-height: 5rem;
         }
 
-        #multigenerationalsec .multigenerationalsectwo .secboxdiv h3 {
+        #apeeksec .multigenerationalsecone p {
             color: #fff;
         }
 
-        .secboxdiv h3 {
+        #apeeksec .multigenerationalsectwo {
+            display: flex;
+            justify-content: space-between;
+            /* background-color: palegoldenrod; */
+            padding: 2rem;
+        }
+
+        #apeeksec .multigenerationalsectwo .secboxdiv {
+            /* background-color: red; */
+            display: flex;
+            padding: 2rem 4rem;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        #apeeksec .multigenerationalsectwo .secboxdiv:not(:last-child) {
+            border-right: 1px solid #fff;
+        }
+
+        #apeeksec .multigenerationalsectwo .secboxdiv h3 {
+            color: #fff;
             font-family: Montserrat;
             font-weight: 700;
             font-style: Bold;
             font-size: 25px;
             line-height: 30px;
-            color: #fff;
         }
 
 
-        /* multigenerationalsec style  end */
+        /* A Peekk Into Our Celebrations style  end */
     </style>
 
 </head>
@@ -74,122 +108,134 @@
         <div class="croousel-container">
             <sl-carousel class="vertical" pagination orientation="vertical">
                 <sl-carousel-item>
-                    <div class="multigenerationalcont main-container">
-                        <div class="multigenerationalsectwo">
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
-                                <h3>Anniversary<br> Celebrations</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
-                                <h3>Art<br> Classes</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
-                                <h3>Birthday<br> Celebrations</h3>
+                    <section id="apeeksec" class="only-desktop">
+                        <div class="multigenerationalcont main-container">
+                            <div class="multigenerationalsectwo">
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                    <h3>Anniversary<br> Celebrations</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                    <h3>Art<br> Classes</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                    <h3>Birthday<br> Celebrations</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </sl-carousel-item>
 
 
                 <sl-carousel-item>
-                    <div class="multigenerationalcont main-container">
-                        <div class="multigenerationalsectwo">
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
-                                <h3>Dances</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
-                                <h3>Day<br> Trips</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
-                                <h3>Diwali</h3>
+                    <section id="apeeksec" class="only-desktop">
+                        <div class="multigenerationalcont main-container">
+                            <div class="multigenerationalsectwo">
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                    <h3>Anniversary<br> Celebrations</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                    <h3>Art<br> Classes</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                    <h3>Birthday<br> Celebrations</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </sl-carousel-item>
 
 
                 <sl-carousel-item>
-                    <div class="multigenerationalcont main-container">
-                        <div class="multigenerationalsectwo">
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
-                                <h3>Fashion<br> Shows</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
-                                <h3>Foundation<br> Day</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
-                                <h3>Karnataka<br> Rajyotsava</h3>
+                    <section id="apeeksec" class="only-desktop">
+                        <div class="multigenerationalcont main-container">
+                            <div class="multigenerationalsectwo">
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                    <h3>Anniversary<br> Celebrations</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                    <h3>Art<br> Classes</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                    <h3>Birthday<br> Celebrations</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </sl-carousel-item>
 
 
                 <sl-carousel-item>
-                    <div class="multigenerationalcont main-container">
-                        <div class="multigenerationalsectwo">
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
-                                <h3>Mother's<br> Day</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
-                                <h3>New Year’s<br> Celebrations</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
-                                <h3>Rummy<br> Tournaments</h3>
+                    <section id="apeeksec" class="only-desktop">
+                        <div class="multigenerationalcont main-container">
+                            <div class="multigenerationalsectwo">
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                    <h3>Anniversary<br> Celebrations</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                    <h3>Art<br> Classes</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                    <h3>Birthday<br> Celebrations</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </sl-carousel-item>
 
 
                 <sl-carousel-item>
-                    <div class="multigenerationalcont main-container">
-                        <div class="multigenerationalsectwo">
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
-                                <h3>Sankranti<br> Celebration</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
-                                <h3>Singing<br> Competitions</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
-                                <h3>Women's<br> Day</h3>
+                    <section id="apeeksec" class="only-desktop">
+                        <div class="multigenerationalcont main-container">
+                            <div class="multigenerationalsectwo">
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                    <h3>Anniversary<br> Celebrations</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                    <h3>Art<br> Classes</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                    <h3>Birthday<br> Celebrations</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </sl-carousel-item>
 
 
                 <sl-carousel-item>
-                    <div class="multigenerationalcont main-container">
-                        <div class="multigenerationalsectwo">
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
-                                <h3>Student-led<br> Performances</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
-                                <h3>Family<br> Cook-Offs</h3>
-                            </div>
-                            <div class="secboxdiv">
-                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
-                                <h3>Storytime<br> Sessions</h3>
+                    <section id="apeeksec" class="only-desktop">
+                        <div class="multigenerationalcont main-container">
+                            <div class="multigenerationalsectwo">
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                    <h3>Anniversary<br> Celebrations</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                    <h3>Art<br> Classes</h3>
+                                </div>
+                                <div class="secboxdiv">
+                                    <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                    <h3>Birthday<br> Celebrations</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </sl-carousel-item>
             </sl-carousel>
         </div>
