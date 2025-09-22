@@ -101,6 +101,12 @@
  .primusdifferencechead h1 {
     font-size: 64px;
   }
+  .navbar {
+  justify-content: flex-start;
+}
+.navbar .logo img {
+  width: 8rem;
+} 
 }
 @media (max-width: 1024px) {
   .tab {
