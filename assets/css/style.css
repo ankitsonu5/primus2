@@ -645,9 +645,10 @@ letter-spacing: 0%;
   font-weight: 700;
   font-style: Bold;
   font-size: 75px;
-  line-height: 100%;
+  line-height: 124%;
   letter-spacing: 0%;
   color: #801B53;
+  margin-bottom: 3rem;
 }
 
 .backedbyvisionariestext p {

@@ -404,7 +404,7 @@
 .imgcontsectext {
     position: absolute;
     bottom: 1rem;
-    left: 2rem;
+    left: 1rem;
     color: #fff;
     z-index: 2;
     overflow: hidden;
