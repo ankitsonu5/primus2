@@ -404,7 +404,7 @@
 .imgcontsectext {
     position: absolute;
     bottom: 1rem;
-    left: 2rem;
+    left: 1rem;
     color: #fff;
     z-index: 2;
     overflow: hidden;
@@ -479,7 +479,9 @@
 /* The Primus Difference end */
 
 /*  Discover a new way to live, together style start */
-#discovernewwaytolivesec {}
+#discovernewwaytolivesec {
+    margin-bottom: 3rem;
+}
 
 #discovernewwaytolivesec .discovernewwaytolivecont {
     display: grid;
@@ -658,6 +660,21 @@
     #opensecretsoflivingsec .opensecretsoflivingimgcont {
         gap: 1rem;
     }
+    #trustedrecognisedsec .sectiontextdwn {
+    background-color: #E6D1DC;
+    padding: 3rem 3rem 2rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+    /* top: 0; */
+    z-index: -1000;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-10.5rem);
+    transition: transform 0.3s ease-in-out;
+}
+
+.trustedrecognisedimg:hover .sectiontextdwn {
+    transform: translateY(-1rem) !important;
+}
 }
 
 @media screen and (max-width: 768px) {
