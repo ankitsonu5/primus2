@@ -191,6 +191,24 @@
 /*From festive end*/
 
 /*A Peekk Into Our Celebrations style start */
+
+.vertical {
+    max-height: 400px;
+}
+
+.vertical::part(base) {
+    grid-template-areas: 'slides slides pagination';
+}
+
+.vertical::part(pagination) {
+    flex-direction: column;
+}
+
+.vertical::part(navigation) {
+    transform: rotate(90deg);
+    display: flex;
+}
+
 #apeeksec {
     /* padding: 5rem !important; */
     background: #801B53;
@@ -199,10 +217,7 @@
 }
 
 #apeeksec .multigenerationalcont {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 10rem 0; */
     display: flex;
     padding: 10rem 0;
 }
@@ -225,7 +240,7 @@
     margin-bottom: 2rem;
     color: #fff;
     padding-right: 3rem;
-    font-size: 3rem;
+    font-size: 3.7rem;
     line-height: 5rem;
 }
 
@@ -294,6 +309,7 @@
     display: flex;
     gap: 22px;
     margin-top: 60px;
+    margin-bottom: 100px;
 }
 
 .livesenior-1 img {
@@ -303,7 +319,7 @@
 
 /*Hear it from end*/
 
-@media screen and (min-width: 1366px) and (max-width:1920px) {
+@media screen and (min-width: 1024px) and (max-width:1366px) {
 
 
 
@@ -314,15 +330,15 @@
         margin-top: 82px;
     }
 
-    /* .a-day-in-life {
+    .a-day-in-life h1 {
         font-family: Montserrat;
         font-weight: 700;
         font-style: Bold;
-        font-size: 25px;
-        line-height: 50px;
+        font-size: 45px;
+        line-height: 65px;
         letter-spacing: -5%;
         color: #801B53;
-    } */
+    }
 
     /* .everydayat {
         font-family: Lato;
@@ -447,6 +463,21 @@
         margin-top: 60px;
     }
 
+    #apeeksec .multigenerationalsecone h1 {
+        font-size: 2.2rem;
+        line-height: 4rem;
+    }
+
+    #apeeksec .multigenerationalcont {
+        align-items: center;
+        padding: 0rem 0;
+    }
+
+    #apeeksec .multigenerationalsectwo .secboxdiv {
+        padding: 0rem 1rem;
+
+    }
+
     .hearitfrom h1 {
         font-family: Montserrat;
         font-weight: 700;
@@ -487,7 +518,7 @@
         margin-top: 42px;
     }
 
-    .a-day-in-life {
+    .a-day-in-life h1 {
         font-family: Montserrat;
         font-weight: 700;
         font-style: Bold;
