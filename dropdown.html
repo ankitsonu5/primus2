@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown with Animated Arrow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .dropdown-container {
+            position: relative;
+            width: 300px;
+        }
+
+        .dropdown-button {
+            width: 100%;
+            padding: 16px 20px;
+            background: white;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-button:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .dropdown-button.active {
+            border-color: #667eea;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.rotated {
+            transform: rotate(360deg);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 2px solid #667eea;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown-menu.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 16px 20px;
+            color: #2d3748;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #e1e5e9;
+            font-weight: 500;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 28px;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Glassmorphism effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <h1 class="title">Select Your Region</h1>
+        
+        <div class="dropdown-container">
+            <button class="dropdown-button" id="dropdownButton">
+                <span id="selectedText">ALL REGIONS</span>
+                <div class="arrow" id="arrow"></div>
+            </button>
+            
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="dropdown-item tab" data-value="all">ALL REGIONS</div>
+                <div class="dropdown-item" data-value="north">NORTH AMERICA</div>
+                <div class="dropdown-item" data-value="europe">EUROPE</div>
+                <div class="dropdown-item" data-value="asia">ASIA PACIFIC</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const arrow = document.getElementById('arrow');
+        const selectedText = document.getElementById('selectedText');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+        let isOpen = false;
+
+        // Hover to open dropdown
+        dropdownButton.addEventListener('mouseenter', function() {
+            openDropdown();
+        });
+
+        // Close dropdown when leaving the entire container
+        const dropdownContainer = document.querySelector('.dropdown-container');
+        dropdownContainer.addEventListener('mouseleave', function() {
+            closeDropdown();
+        });
+
+        // Handle item selection
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                const text = this.textContent;
+                
+                selectedText.textContent = text;
+                closeDropdown();
+                
+                // Add a subtle selection animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Optional: Keep click functionality as well
+        dropdownButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        // Close dropdown on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDropdown();
+            }
+        });
+
+        function toggleDropdown() {
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        }
+
+        function openDropdown() {
+            isOpen = true;
+            dropdownMenu.classList.add('show');
+            arrow.classList.add('rotated');
+            dropdownButton.classList.add('active');
+        }
+
+        function closeDropdown() {
+            isOpen = false;
+            dropdownMenu.classList.remove('show');
+            arrow.classList.remove('rotated');
+            dropdownButton.classList.remove('active');
+        }
+
+        // Add keyboard navigation
+        dropdownButton.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
+        });
+
+        // Add smooth hover effects for better UX
+        dropdownItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -62,10 +62,123 @@
   display: flex;
   gap: 3rem;
 }
+.tab {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    border: 2px solid black;
+}
+.knowmoreslider {
+    padding: 1rem 3rem !important;
+    font-size: 16px;
+}
+.exploreourcommunitieshead h1 {
+  font-size: 4.5rem;
+}
+.buildontrustbackbyproofhead h1 {
+    font-size: 50.91px;
+    line-height: 63.01px;
+}
+.buildontrustbackbyproofcontgrid {
+    gap: 2rem;
+}
+.contgriddiv h2 {
+    font-size: 42px;
+}
+.backedbyvisionariestext h1 {
+    font-size: 46px;
+    margin-bottom: 3rem;
+}
+.visionariesimgtwo {
+  width: 70%;
+}
+.visionariesimgone {
+  width: 75%;
+}
+.backedbyvisionariestext p {
+  font-size: 1.2rem;
+  line-height: 23px;
  }
-
+ .primusdifferencechead h1 {
+    font-size: 64px;
+  }
+}
 @media (max-width: 1024px) {
+  .tab {
+        padding: 1rem 0rem;
+        font-size: 0.8rem;
+    }
+  .slider-container {
+    margin: 0 1rem;
+  }
+  .slide {
+    gap: 2rem;
+}
+.textcontslider h1 {
+    font-size: 27.23px;
+}
+.slide p {
+    font-size: 18.49px;
+    line-height: 24.86px;
+}
+.sliderlocpara {
+    font-size: 1.2rem !important;
+}
+.sliderlocpara img{
+    width: 1.2rem;
+    margin-right: 1rem;
+}
+.buildontrustbackbyproofcont {
+  gap: 1rem;
+  margin: 0 1rem;
+}
+.contgriddiv p {
+    font-size: 16px;
+}
+.buildontrustbackbyproofcontgrid {
+        gap: 0.7rem;
+    }
+    .contgriddiv h2 {
+        font-size: 32px;
+    }
+  .buildontrustbackbyproofhead h1 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .buildontrustbackbyproofcontgrid {
+    margin-top: 2rem;
+}
+.buildontrustbackbyproofimg img {
+    width: 95%;
+    justify-self: center;
+}
+.backedbyvisionariescont {
+    margin: 0 1rem;
+}
+.backedbyvisionariestext h1 {
+        font-size: 42px;
+        margin-bottom: 3rem;
+    }
+    .backedbyvisionariestext p {
+        font-size: 1rem;
+        line-height: 23px;
+    }
+    #backedbyvisionariessec {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.primusvideocont {
+    /* margin: 0 1rem; */
+    width: 92%;
+    margin: 0 auto;
 
+}
+.primusvideocont video {
+    width: 95%;
+}
+.primusdifferencecdivtext p {
+    font-size: 17px;
+    line-height: 26px;
+}
 }
  @media (max-width: 768px) {
    .gallery {
