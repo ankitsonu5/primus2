@@ -4,7 +4,29 @@
     box-sizing: border-box;
 }
 
+/* .primary-headings {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: -5%;
+}
+
+.primary-para {
+    font-family: Lato;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: center;
+
+} */
+
 /*A day in life start*/
+
 
 .adayinlife {
     display: flex;
@@ -13,14 +35,16 @@
     margin-top: 82px;
 }
 
-.a-day-in-life {
+.a-day-in-life h1 {
     font-family: Montserrat;
     font-weight: 700;
     font-style: Bold;
-    font-size: 40px;
+    font-size: 80px;
     line-height: 90px;
     letter-spacing: -5%;
     color: #801B53;
+
+
 }
 
 .everydayat {
@@ -166,6 +190,80 @@
 
 /*From festive end*/
 
+/*A Peekk Into Our Celebrations style start */
+#apeeksec {
+    /* padding: 5rem !important; */
+    background: #801B53;
+    margin-bottom: 8rem;
+    margin-top: 120px;
+}
+
+#apeeksec .multigenerationalcont {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10rem 0; */
+    display: flex;
+    padding: 10rem 0;
+}
+
+.multigenerationalsecone {
+    /* flex: 2; */
+    width: 30%;
+}
+
+.multigenerationalsectwo {
+    /* flex: 1; */
+    width: 70%;
+}
+
+#apeeksec .multigenerationalsecone {
+    border-right: 1px solid #fff;
+}
+
+#apeeksec .multigenerationalsecone h1 {
+    margin-bottom: 2rem;
+    color: #fff;
+    padding-right: 3rem;
+    font-size: 3rem;
+    line-height: 5rem;
+}
+
+#apeeksec .multigenerationalsecone p {
+    color: #fff;
+}
+
+#apeeksec .multigenerationalsectwo {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: palegoldenrod; */
+    padding: 2rem;
+}
+
+#apeeksec .multigenerationalsectwo .secboxdiv {
+    /* background-color: red; */
+    display: flex;
+    padding: 2rem 4rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+#apeeksec .multigenerationalsectwo .secboxdiv:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+#apeeksec .multigenerationalsectwo .secboxdiv h3 {
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+
+/* A Peekk Into Our Celebrations style  end */
+
 /*Hear it from start*/
 #hear-it-from {
     margin-top: 100px;
@@ -195,7 +293,7 @@
 .live-senior {
     display: flex;
     gap: 22px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .livesenior-1 img {
@@ -257,6 +355,7 @@
         padding: 5px 10px;
     }
 
+
     .card-para {
         position: absolute;
         bottom: 15px;
@@ -284,13 +383,13 @@
     }
 
     .talktoustxt p {
-      font-family: Lato;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
- 
-line-height: 25px;
-letter-spacing: 0%;
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+
+        line-height: 25px;
+        letter-spacing: 0%;
 
     }
 

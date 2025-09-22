@@ -26,8 +26,13 @@
 
 /*The living hub start*/
 
+#the-living {
+    margin-top: 120px;
+}
+
 .theliving {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     /* gap: 40px; */
 }
@@ -48,17 +53,19 @@
     font-style: Regular;
     font-size: 20px;
     line-height: 25px;
+    margin-top: 50px;
 }
 
 .theliving-img img {
     border-radius: 30px;
+    width: 100%;
 }
 
 /*The living hub end*/
 
 /*Talk to us start*/
 #desigen-safety {
-    margin-top: 50px;
+    margin: 110px 0px;
 }
 
 .desigensafety {
@@ -66,6 +73,11 @@
     align-items: center;
     gap: 30px;
 }
+
+/* 
+.desigen-safetyimg img {
+    width: 100%;
+} */
 
 /*Talk to us end*/
 
@@ -100,8 +112,8 @@
 
 .item {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
+    /* gap: 22px; */
     padding: 16px 18px;
     cursor: pointer;
     background: transparent;
@@ -118,11 +130,12 @@
     min-width: 0;
 }
 
-.title {
+.title h2 {
+    font-family: Montserrat;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.05;
-    color: var(--text);
+    font-style: Bold;
+    font-size: 35px;
+    line-height: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -213,10 +226,10 @@
 }
 
 
-.simple-item .title {
+/* .simple-item .title {
     font-weight: 700;
     font-size: 15px
-}
+} */
 
 
 .expanded .subtitle {
@@ -272,6 +285,11 @@ button.item {
 }
 
 /*kitchen that work start*/
+
+#kitchenwork {
+    margin-top: 120px;
+}
+
 .kitchenwhork-txt {
     font-family: Montserrat;
     font-weight: 700;
@@ -285,16 +303,88 @@ button.item {
 
 .kitchenwhork-img {
     display: flex;
-    gap: 10px;
+    gap: 25px;
+    margin-top: 60px;
 }
 
-.kitchenwhork-img img {
-    border-radius: 10px;
-}
 
 /*kitchen that work end*/
 
-/* The Primus Difference start */
+/* Think Ahead style start */
+#thinkaheadsec {
+    /* padding: 5rem !important; */
+    background: #801B53;
+    margin-bottom: 8rem;
+    margin-top: 120px;
+}
+
+#thinkaheadsec .multigenerationalcont {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10rem 0; */
+    display: flex;
+    padding: 10rem 0;
+}
+
+.multigenerationalsecone {
+    /* flex: 2; */
+    width: 30%;
+}
+
+.multigenerationalsectwo {
+    /* flex: 1; */
+    width: 70%;
+}
+
+#thinkaheadsec .multigenerationalsecone {
+    border-right: 1px solid #fff;
+}
+
+#thinkaheadsec .multigenerationalsecone h1 {
+    margin-bottom: 2rem;
+    color: #fff;
+    padding-right: 3rem;
+    font-size: 3rem;
+    line-height: 5rem;
+}
+
+#thinkaheadsec .multigenerationalsecone p {
+    color: #fff;
+}
+
+#thinkaheadsec .multigenerationalsectwo {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: palegoldenrod; */
+    padding: 2rem;
+}
+
+#thinkaheadsec .multigenerationalsectwo .secboxdiv {
+    /* background-color: red; */
+    display: flex;
+    padding: 2rem 4rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+#thinkaheadsec .multigenerationalsectwo .secboxdiv:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+#thinkaheadsec .multigenerationalsectwo .secboxdiv h3 {
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+
+/* Think Ahead style  end */
+
+/* Homes Care start */
 #homecaresec {
     padding: 0 0 5rem 0;
 
@@ -309,22 +399,47 @@ button.item {
     margin-bottom: 1rem;
 }
 
-
-#homecaresec .homecaresec-img {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 #homecaresec .homecaresecimg-group {
-    padding: 5rem 10rem;
+    padding: 0rem 10rem;
     display: flex;
     align-items: center;
-    /* justify-content: space-evenly; */
+    justify-content: center !important;
+    gap: 300px;
 }
 
-/* The Primus Difference end */
+#homecaresec .homecaresec-img {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+
+}
+
+.homecaresec-img h2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+
+
+/* Homes Care end */
+
+.morethan-img {
+    margin-top: 120px;
+    display: flex;
+    gap: 25px;
+}
 
 /*Stay connect start*/
+
+#stayconnectsec {
+    margin-top: 90px;
+}
 
 .stay-connect h1 {
     font-family: Montserrat;
@@ -343,6 +458,7 @@ button.item {
     justify-content: center;
     gap: 180px;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .tab {
@@ -368,17 +484,20 @@ button.item {
 /* Carousel */
 .carousel {
     display: flex;
-    gap: 16px;
-    max-width: 900px;
+    /* gap: 16px; */
+    max-width: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .card {
     flex: 0 0 auto;
-    width: 250px;
+    /* width: 345px; */
     border-radius: 16px;
     overflow: hidden;
     transition: width 0.7s ease;
+    margin-top: 50px;
+    padding: 0px 15px;
     /* smooth expand */
     transform-origin: left right;
     /* expand from left */
@@ -398,3 +517,123 @@ button.item {
 }
 
 /*Stay connect end*/
+
+
+/* Desktops and up */
+@media (min-width: 1200px) and (max-width: 1366px) {
+    /* optional refinements */
+
+    /*The living hub start*/
+
+    /* #the-living {
+    margin-top: 120px;
+} */
+
+    /* .theliving {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+} */
+
+    .theliving-txt h1 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 70px;
+        line-height: 80px;
+        letter-spacing: -5%;
+        color: #801B53;
+    }
+
+    .theliving-txt p {
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 30px;
+    }
+
+    .theliving-img {
+        width: 700px
+    }
+
+    .theliving-img img {
+        width: 100%;
+    }
+
+    /*The living hub end*/
+
+    /*Talk to us start*/
+    /* #desigen-safety {
+    margin: 110px 0px;
+} */
+
+    .desigensafety {
+        /* display: flex;
+    align-items: center; */
+        gap: 25px;
+    }
+
+    .desigen-safetyimg {
+        width: 780px;
+    }
+
+    .desigen-safetyimg img {
+        width: 100%;
+    }
+
+    /*Talk to us end*/
+
+    .card {
+        margin-top: 25px;
+    }
+
+    .item {
+        /* display: flex;
+    align-items: center;
+    gap: 22px; */
+        padding: 10px 18px;
+        /* cursor: pointer;
+    background: transparent;
+    transition: background 0.3s, transform 0.25s; */
+    }
+
+
+
+    .title h2 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    /*kitchen that work start*/
+
+    /* #kitchenwork {
+    margin-top: 120px;
+} */
+
+    .kitchenwhork-txt {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 40px;
+        line-height: 90px;
+        letter-spacing: -5%;
+        text-align: center;
+        color: #801B53;
+    }
+
+    .kitchenwhork-img {
+        display: flex;
+        gap: 25px;
+        margin-top: 60px;
+    }
+
+
+    /*kitchen that work end*/
+
+}

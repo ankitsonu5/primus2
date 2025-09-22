@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+
+    <style>
+        .vertical {
+            max-height: 400px;
+        }
+
+        .vertical::part(base) {
+            grid-template-areas: 'slides slides pagination';
+        }
+
+        .vertical::part(pagination) {
+            flex-direction: column;
+        }
+
+        .vertical::part(navigation) {
+            transform: rotate(90deg);
+            display: flex;
+        }
+
+        /* multigenerationalsec style start */
+
+        .croousel-container {
+            background: #801B53;
+        }
+
+        .multigenerationalsectwo {
+            /* flex: 1; */
+            /* width: 60%; */
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin: 5rem 0rem;
+            padding: 20px;
+        }
+
+        #multigenerationalsec .multigenerationalsecone {
+            border-right: 1px solid #fff;
+        }
+
+        #multigenerationalsec .multigenerationalsectwo .secboxdiv:not(:last-child) {
+            border-right: 1px solid #fff;
+        }
+
+        #multigenerationalsec .multigenerationalsectwo .secboxdiv h3 {
+            color: #fff;
+        }
+
+        .secboxdiv h3 {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 25px;
+            line-height: 30px;
+            color: #fff;
+        }
+
+
+        /* multigenerationalsec style  end */
+    </style>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="croousel-container">
+            <sl-carousel class="vertical" pagination orientation="vertical">
+                <sl-carousel-item>
+                    <div class="multigenerationalcont main-container">
+                        <div class="multigenerationalsectwo">
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                <h3>Anniversary<br> Celebrations</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                <h3>Art<br> Classes</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                <h3>Birthday<br> Celebrations</h3>
+                            </div>
+                        </div>
+                    </div>
+                </sl-carousel-item>
+
+
+                <sl-carousel-item>
+                    <div class="multigenerationalcont main-container">
+                        <div class="multigenerationalsectwo">
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                <h3>Dances</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                <h3>Day<br> Trips</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                <h3>Diwali</h3>
+                            </div>
+                        </div>
+                    </div>
+                </sl-carousel-item>
+
+
+                <sl-carousel-item>
+                    <div class="multigenerationalcont main-container">
+                        <div class="multigenerationalsectwo">
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                <h3>Fashion<br> Shows</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                <h3>Foundation<br> Day</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                <h3>Karnataka<br> Rajyotsava</h3>
+                            </div>
+                        </div>
+                    </div>
+                </sl-carousel-item>
+
+
+                <sl-carousel-item>
+                    <div class="multigenerationalcont main-container">
+                        <div class="multigenerationalsectwo">
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                <h3>Mother's<br> Day</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                <h3>New Year’s<br> Celebrations</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                <h3>Rummy<br> Tournaments</h3>
+                            </div>
+                        </div>
+                    </div>
+                </sl-carousel-item>
+
+
+                <sl-carousel-item>
+                    <div class="multigenerationalcont main-container">
+                        <div class="multigenerationalsectwo">
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                <h3>Sankranti<br> Celebration</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                <h3>Singing<br> Competitions</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                <h3>Women's<br> Day</h3>
+                            </div>
+                        </div>
+                    </div>
+                </sl-carousel-item>
+
+
+                <sl-carousel-item>
+                    <div class="multigenerationalcont main-container">
+                        <div class="multigenerationalsectwo">
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 1.png" alt=""></div>
+                                <h3>Student-led<br> Performances</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 2.png" alt=""></div>
+                                <h3>Family<br> Cook-Offs</h3>
+                            </div>
+                            <div class="secboxdiv">
+                                <div><img src="./assets/images/lifestyle images/icon 3.png" alt=""></div>
+                                <h3>Storytime<br> Sessions</h3>
+                            </div>
+                        </div>
+                    </div>
+                </sl-carousel-item>
+            </sl-carousel>
+        </div>
+    </div>
+
+
+
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+</body>
+
+</html>
