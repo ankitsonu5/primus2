@@ -1,4 +1,4 @@
- /* ------ Breakpoints (mobile-first; use min-width) ------ */
+ /* ------ Breakpoints (mobile-first; use min-width) for main container ------ */
  /* Small tablets and up */
  @media (min-width: 576px) {}
 
@@ -33,6 +33,7 @@
  @media (min-width: 1920px) {
    .main-container {
      max-width: 1850px;
+     padding: 0 1rem;
    }
 
    /* gentle upscale, optional */
@@ -46,3 +47,48 @@
      letter-spacing: 0%;
    }
  }
+
+
+
+
+
+ /* ***************  breakdown point for other styles start *********************** */
+ @media (max-width: 1366px) {
+   #primusgallerydesignsec .gallery {
+     padding: 0 1rem;
+   }
+   .primusvideocontcontainer {
+  padding: 2.5rem 3rem;
+  display: flex;
+  gap: 3rem;
+}
+ }
+
+@media (max-width: 1024px) {
+
+}
+ @media (max-width: 768px) {
+   .gallery {
+     flex-direction: column;
+     height: auto;
+   }
+
+   .gallery-item {
+     flex: none;
+     height: 100px;
+     transition: height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   }
+
+   .gallery-item.expanded {
+     height: 300px;
+   }
+
+   h1 {
+     font-size: 2rem;
+   }
+ }
+
+ @media (max-width: 480px) {
+ }
+
+ /* ***************  breakdown point for other styles end *********************** */
