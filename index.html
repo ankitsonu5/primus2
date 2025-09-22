@@ -133,7 +133,15 @@
                     <div class="tab-indicator"></div>
                     <button class="tab active" data-slide="0">SENIOR LIVING</button>
                     <button class="tab" data-slide="1">MULTIGENERATIONAL LIVING</button>
-                    <button  class="tab" data-slide="2">ALL REGIONS <i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="dropdown">
+                        <button class="tab dropbtn" onclick="myFunction()" data-slide="2">ALL REGIONS <i
+                        class="fa-solid fa-chevron-right drparrow"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div class="mydropdownone"><a href="#home">Home</a></div>
+                            <div class="mydropdowntwo"><a href="#about">About</a></div>
+                            <div class="mydropdownthree"><a href="#contact">Contact</a></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -537,6 +545,33 @@
         });
     </script>
     <!-- ************************************** primus gallery design js code end ******************* -->
+
+    <!-- tab -->
+     <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.hover = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+    <!-- tab -->
+
+
 </body>
 
 </html>

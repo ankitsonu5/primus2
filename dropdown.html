@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown with Animated Arrow</title>
+    <title>Living Spaces - Tabbed Slider</title>
     <style>
         * {
             margin: 0;
@@ -13,231 +13,538 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: #f8f9fa;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 20px;
+        }
+
+        .tabs-container {
+            display: flex;
+            gap: 0;
+            margin-bottom: 30px;
+            align-items: stretch;
+        }
+
+        .tab {
+            background: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            border-radius: 25px;
+            margin-right: 10px;
+            color: #666;
+        }
+
+        .tab.active {
+            background: #8B4A6B;
+            color: white;
+        }
+
+        .tab:hover:not(.active) {
+            background: #f0f0f0;
         }
 
         .dropdown-container {
             position: relative;
-            width: 300px;
+            display: inline-block;
         }
 
-        .dropdown-button {
-            width: 100%;
-            padding: 16px 20px;
-            background: white;
-            border: 2px solid #e1e5e9;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #2d3748;
-            cursor: pointer;
+        .tab[data-tab="regions"] {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            gap: 10px;
         }
 
-        .dropdown-button:hover {
-            border-color: #667eea;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .dropdown-button.active {
-            border-color: #667eea;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .arrow {
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 6px solid #667eea;
+        .dropdown-arrow {
             transition: transform 0.3s ease;
+            font-size: 14px;
         }
 
-        .arrow.rotated {
-            transform: rotate(360deg);
+        .tab[data-tab="regions"]:hover .dropdown-arrow {
+            transform: rotate(180deg);
         }
-        
-        .dropdown-menu {
+
+        .tab[data-tab="regions"].active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown {
             position: absolute;
             top: 100%;
             left: 0;
-            width: 100%;
+            right: 0;
             background: white;
-            border: 2px solid #667eea;
-            border-top: none;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
             transition: all 0.3s ease;
-            z-index: 1000;
+            margin-top: 5px;
+            border: 2px solid #333;
+            overflow: hidden;
         }
 
-        .dropdown-menu.show {
+        .dropdown.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
 
         .dropdown-item {
-            padding: 16px 20px;
-            color: #2d3748;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid #e1e5e9;
+            display: block;
+            padding: 15px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #333;
             font-weight: 500;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            background: white;
         }
 
         .dropdown-item:last-child {
             border-bottom: none;
         }
 
+        .dropdown-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .dropdown-item:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            transform: translateX(5px);
+            background: #f8f9fa;
+            color: #8B4A6B;
         }
 
-        .title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: white;
-            font-size: 28px;
-            font-weight: 300;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        .slider-container {
+            position: relative;
+            background: #f0e6eb;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
 
-        /* Glassmorphism effect */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 500px;
+        }
+
+        .slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
             padding: 40px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-image {
+            flex: 1;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-right: 40px;
+        }
+
+        .slide-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .slide-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 300;
+        }
+
+        .slide-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .location::before {
+            content: "📍";
+            margin-right: 8px;
+        }
+
+        .cta-button {
+            background: #8B4A6B;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: #7a4058;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 74, 107, 0.3);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #8B4A6B;
+            transform: scale(1.2);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .tabs-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .tab {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .slide {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .slide-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+                height: 250px;
+            }
+
+            .slide-content h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="glass-card">
-        <h1 class="title">Select Your Region</h1>
-        
-        <div class="dropdown-container">
-            <button class="dropdown-button" id="dropdownButton">
-                <span id="selectedText">ALL REGIONS</span>
-                <div class="arrow" id="arrow"></div>
-            </button>
-            
-            <div class="dropdown-menu" id="dropdownMenu">
-                <div class="dropdown-item tab" data-value="all">ALL REGIONS</div>
-                <div class="dropdown-item" data-value="north">NORTH AMERICA</div>
-                <div class="dropdown-item" data-value="europe">EUROPE</div>
-                <div class="dropdown-item" data-value="asia">ASIA PACIFIC</div>
+    <div class="container">
+        <div class="tabs-container">
+            <button class="tab active" data-tab="senior">Senior Living</button>
+            <button class="tab" data-tab="multi">Multigenerational Living</button>
+            <div class="dropdown-container tab">
+                <button class="tab" data-tab="regions" id="regionsTab">
+                    <span>ALL REGIONS</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown" id="regionsDropdown">
+                    <a href="#" class="dropdown-item" data-region="bangalore">Bangalore</a>
+                    <a href="#" class="dropdown-item" data-region="chennai">Chennai</a>
+                    <a href="#" class="dropdown-item" data-region="kolkata">Kolkata</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Senior Living Content -->
+        <div class="tab-content active" id="senior">
+            <div class="slider-container">
+                <div class="slider" id="seniorSlider">
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23d4a574%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22>Senior Living Space</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Comfortable Senior Living</h2>
+                            <p>Experience luxury and comfort in our thoughtfully designed senior living spaces with modern amenities and caring staff.</p>
+                            <div class="location">Mumbai</div>
+                            <button class="cta-button">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23a8b5c8%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22>Healthcare Facilities</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Healthcare & Wellness</h2>
+                            <p>24/7 medical care and wellness programs designed to keep you healthy, active, and engaged in a supportive community.</p>
+                            <div class="location">Delhi</div>
+                            <button class="cta-button">Explore Services</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23c8a8b5%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22>Community Activities</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Vibrant Community</h2>
+                            <p>Join a thriving community with social activities, cultural events, and lifelong friendships waiting to be made.</p>
+                            <div class="location">Pune</div>
+                            <button class="cta-button">Join Community</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+
+        <!-- Multigenerational Living Content -->
+        <div class="tab-content" id="multi">
+            <div class="slider-container">
+                <div class="slider" id="multiSlider">
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23d4a574%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22>Family Living Space</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Family Together</h2>
+                            <p>Where generations converge in independent homes, shared spaces, and seamless care for the whole family.</p>
+                            <div class="location">Bangalore</div>
+                            <button class="cta-button">Know More</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23b5a8c8%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22>Shared Amenities</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Shared Experiences</h2>
+                            <p>Common areas and amenities that bring families together while maintaining privacy and independence for all ages.</p>
+                            <div class="location">Hyderabad</div>
+                            <button class="cta-button">Discover More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+            </div>
+        </div>
+
+        <!-- All Regions Content -->
+        <div class="tab-content" id="regions">
+            <div class="slider-container">
+                <div class="slider" id="regionsSlider">
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23a8c8b5%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22>Bangalore</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Bangalore</h2>
+                            <p>Discover premium living spaces in India's Silicon Valley, where modern amenities meet traditional comfort.</p>
+                            <div class="location">Bangalore</div>
+                            <button class="cta-button">Explore Bangalore</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%238B4A6B%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22>Chennai</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Chennai</h2>
+                            <p>Experience coastal living with world-class facilities in Chennai's most sought-after neighborhoods.</p>
+                            <div class="location">Chennai</div>
+                            <button class="cta-button">Explore Chennai</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23c8b5a8%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22>Kolkata</text></svg>');"></div>
+                        <div class="slide-content">
+                            <h2>Kolkata</h2>
+                            <p>Immerse yourself in cultural richness while enjoying contemporary living solutions in the City of Joy.</p>
+                            <div class="location">Kolkata</div>
+                            <button class="cta-button">Explore Kolkata</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
             </div>
         </div>
     </div>
 
     <script>
-        const dropdownButton = document.getElementById('dropdownButton');
-        const dropdownMenu = document.getElementById('dropdownMenu');
-        const arrow = document.getElementById('arrow');
-        const selectedText = document.getElementById('selectedText');
-        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        let currentSlide = { senior: 0, multi: 0, regions: 0 };
+        let activeTab = 'senior';
 
-        let isOpen = false;
-
-        // Hover to open dropdown
-        dropdownButton.addEventListener('mouseenter', function() {
-            openDropdown();
-        });
-
-        // Close dropdown when leaving the entire container
-        const dropdownContainer = document.querySelector('.dropdown-container');
-        dropdownContainer.addEventListener('mouseleave', function() {
-            closeDropdown();
-        });
-
-        // Handle item selection
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const value = this.getAttribute('data-value');
-                const text = this.textContent;
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                const tabName = e.target.dataset.tab;
                 
-                selectedText.textContent = text;
-                closeDropdown();
-                
-                // Add a subtle selection animation
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
+                if (tabName && tabName !== 'regions') {
+                    // Regular tab switching
+                    switchTab(tabName);
+                } else if (tabName === 'regions') {
+                    // Switch to regions tab
+                    switchTab('regions');
+                }
             });
         });
 
-        // Optional: Keep click functionality as well
-        dropdownButton.addEventListener('click', function(e) {
-            e.stopPropagation();
-            toggleDropdown();
+        // Dropdown hover functionality
+        const dropdownContainer = document.querySelector('.dropdown-container');
+        
+        dropdownContainer.addEventListener('mouseenter', () => {
+            showDropdown();
+            switchTab('regions');
+        });
+        
+        dropdownContainer.addEventListener('mouseleave', () => {
+            hideDropdown();
         });
 
-        // Close dropdown on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeDropdown();
-            }
-        });
-
-        function toggleDropdown() {
-            if (isOpen) {
-                closeDropdown();
-            } else {
-                openDropdown();
-            }
-        }
-
-        function openDropdown() {
-            isOpen = true;
-            dropdownMenu.classList.add('show');
-            arrow.classList.add('rotated');
-            dropdownButton.classList.add('active');
-        }
-
-        function closeDropdown() {
-            isOpen = false;
-            dropdownMenu.classList.remove('show');
-            arrow.classList.remove('rotated');
-            dropdownButton.classList.remove('active');
-        }
-
-        // Add keyboard navigation
-        dropdownButton.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
+        // Dropdown item click handlers
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', (e) => {
                 e.preventDefault();
-                toggleDropdown();
-            }
+                const region = e.target.dataset.region;
+                
+                // Switch to the appropriate slide based on region
+                switch(region) {
+                    case 'bangalore':
+                        currentSlide.regions = 0;
+                        break;
+                    case 'chennai':
+                        currentSlide.regions = 1;
+                        break;
+                    case 'kolkata':
+                        currentSlide.regions = 2;
+                        break;
+                }
+                
+                updateSlider('regions');
+                
+                // Hide dropdown and reset animations
+                hideDropdown();
+            });
         });
 
-        // Add smooth hover effects for better UX
-        dropdownItems.forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(5px)';
+        function showDropdown() {
+            const dropdown = document.getElementById('regionsDropdown');
+            const items = dropdown.querySelectorAll('.dropdown-item');
+            
+            dropdown.classList.add('show');
+            
+            // Reset all items
+            items.forEach(item => {
+                item.classList.remove('animate');
             });
             
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
+            // Animate items one by one
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate');
+                }, index * 100); // 100ms delay between each item
             });
+        }
+
+        function hideDropdown() {
+            const dropdown = document.getElementById('regionsDropdown');
+            const items = dropdown.querySelectorAll('.dropdown-item');
+            
+            // Remove animations
+            items.forEach(item => {
+                item.classList.remove('animate');
+            });
+            
+            dropdown.classList.remove('show');
+        }
+
+        // Close dropdown when clicking outside (removed since we're using hover)
+        // Dropdown item click handlers maintain their functionality
+
+        function switchTab(tabName) {
+            activeTab = tabName;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+            
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            
+            // Reset slider to first slide for new tab
+            currentSlide[tabName] = 0;
+            updateSlider(tabName);
+        }
+
+        function updateSlider(tabName) {
+            const slider = document.getElementById(`${tabName}Slider`);
+            const dots = document.querySelectorAll(`#${tabName} .dot`);
+            
+            // Update slider position
+            slider.style.transform = `translateX(-${currentSlide[tabName] * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide[tabName]);
+            });
+        }
+
+        // Dot click handlers for all tabs
+        ['senior', 'multi', 'regions'].forEach(tabName => {
+            const tabElement = document.getElementById(tabName);
+            if (tabElement) {
+                const dots = tabElement.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide[tabName] = index;
+                        updateSlider(tabName);
+                    });
+                });
+            }
         });
+
+        // Auto-advance slider every 5 seconds
+        setInterval(() => {
+            const tabContent = document.querySelector('.tab-content.active');
+            const totalSlides = tabContent.querySelectorAll('.slide').length;
+            
+            currentSlide[activeTab] = (currentSlide[activeTab] + 1) % totalSlides;
+            updateSlider(activeTab);
+        }, 5000);
+
+        // Initialize
+        updateSlider('senior');
     </script>
 </body>
 </html>
