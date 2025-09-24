@@ -25,6 +25,7 @@
   box-sizing: border-box;
 }
 
+/* ****************** Desktop Code *********************** */
 html,
 body {
   height: 100%;
@@ -99,10 +100,7 @@ body {
 
 .menu ul li {
   display: inline;
-
-
 }
-
 
 .menu ul li a {
   color: #53103C;
@@ -238,9 +236,9 @@ body {
 
 .tabs {
   display: flex;
-  /* background: #f8f9fa; */
+  background: #f8f9fa;
   gap: 3rem;
-  /* border-radius: 2rem; */
+  border-radius: 2rem;
   padding: 5px;
   position: relative;
   /* overflow: hidden; */
@@ -864,6 +862,77 @@ letter-spacing: 0%;
 }
 
 
+/* *********************** Mobile Section Page Design Code ************************* */
+/* Mobile primus gallery design style start */
+     #mobileprimusglrydsgnsec .swiper {
+      width: 100%;
+      height: 32rem;
+      padding: 1rem;
+    }
+
+    #mobileprimusglrydsgnsec .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    #mobileprimusglrydsgnsec .swiper-slide img {
+      display: block;
+      max-width: 100%;
+      border-radius: 24px;
+      height: 100%;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+    }
+    #mobileprimusglrydsgnsec .swiper-slider-cont h2{
+      position: absolute;
+      bottom: 6.5rem;
+      color: #fff;
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      font-family: Montserrat;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 18px;
+      line-height: 10.41px;
+      letter-spacing: 0%;
+    }
+    #mobileprimusglrydsgnsec .swiper-slider-cont p {
+      position: absolute;
+      bottom: 4rem;
+      margin-left: 2rem;
+      color: #fff;
+      padding-right: 11rem;
+      font-family: Lato;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    #mobileprimusglrydsgnsec .swiper-pagination {
+      /* background-color: red; */
+      margin-top: 7rem !important; 
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    #mobileprimusglrydsgnsec .swiper-pagination-bullet  {
+      width: 1rem;
+      height: 1rem;
+      background: #000 !important;
+      opacity: 1;
+    }
+    #mobileprimusglrydsgnsec .swiper-pagination-bullet-active  {
+      outline: 2px solid #000;
+      outline-offset: 5px;
+    }
+/* Mobile primus gallery design style end */
 
 
 

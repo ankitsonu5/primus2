@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0823a66b46.js" crossorigin="anonymous"></script>
     <title>Primus</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -121,8 +123,72 @@
     </div>
     <!--primus gallery design end -->
 
+    <!-- Mobile primus gallery design start -->
+    <section id="mobileprimusglrydsgnsec" class="only-mobile">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slider-cont">
+                        <img src="./assets/images/Home/primusgallerybgone.png" alt="">
+                        <h2>Social Connections</h2>
+                        <p>Lounges, activity rooms, and shared spaces for<br> conversation. Homes that keep loneliness at bay.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                    <div class="swiper-slider-cont">
+                        <img src="./assets/images/Home/primusgallerybgone.png" alt="">
+                        <h2>Creative Corners</h2>
+                        <p>Rooms for painting, music, and everything in between.<br> Spaces that keep passion alive every day</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                    <div class="swiper-slider-cont">
+                        <img src="./assets/images/Home/primusgallerybgthree.png" alt="">
+                        <h2>Playful Minds</h2>
+                        <p>Chess, carrom, and board games that sharpen the <br> mind. Fun and focus, side by side.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                    <div class="swiper-slider-cont">
+                        <img src="./assets/images/Home/primusgallerybgfour.png" alt="">
+                        <h2>Cultural Delights</h2>
+                        <p>Film nights, music shows, and cultural evenings to <br> cherish. Fun is always close to home.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                    <div class="swiper-slider-cont">
+                        <img src="./assets/images/Home/primusgallerybgfive.png" alt="">
+                        <h2>Mindful Moments</h2>
+                        <p>Morning stretches in sunlit lawns with friends by your <br> side. Strength and serenity in every breath.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                    <div class="swiper-slider-cont">
+                        <img src="./assets/images/Home/primusgallerybgsix.png" alt="">
+                        <h2>Shared Moments</h2>
+                        <p>Festivals, events, and celebrations that bring everyone <br> closer. A community where life is shared</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="swiper-pagination">
+                
+            </div>
+        </div>
+    </section>
+    <!-- Mobile primus gallery design end -->
+
     <!-- Explore Our Communities start -->
-    <section class="exploreourcommunitiessec">
+    <section class="exploreourcommunitiessec" class="only-desktop">
         <div class="exploreourcommunitiescont main-container">
             <div class="exploreourcommunitieshead">
                 <h1>Explore Our Communities</h1>
@@ -133,9 +199,9 @@
                     <button class="tab active" data-slide="0">SENIOR LIVING</button>
                     <button class="tab" data-slide="1">MULTIGENERATIONAL LIVING</button>
                     <!-- <div class="dropdown"> -->
-                        <button class="tab dropbtn" onclick="myFunction()" data-slide="2">ALL REGIONS <i
-                        class="fa-solid fa-chevron-right drparrow"></i></button>
-                        <!-- <div id="myDropdown" class="dropdown-content">
+                    <button class="tab dropbtn" onclick="myFunction()" data-slide="2">ALL REGIONS <i
+                            class="fa-solid fa-chevron-right drparrow"></i></button>
+                    <!-- <div id="myDropdown" class="dropdown-content">
                             <div class="mydropdownone"><a href="#home">Home</a></div>
                             <div class="mydropdowntwo"><a href="#about">About</a></div>
                             <div class="mydropdownthree"><a href="#contact">Contact</a></div>
@@ -189,7 +255,7 @@
     <!-- Explore Our Communities end -->
 
     <!-- Built on Trust. Backed by Proof.start -->
-    <section id="buildontrustbackbyproofsec">
+    <section id="buildontrustbackbyproofsec" class="only-desktop">
         <div class="buildontrustbackbyproofcont main-container">
             <div class="buildontrustbackbyproofimg">
                 <img src="./assets/images/Home/buildonproofbg.png" alt="">
@@ -243,7 +309,7 @@
     <!-- Built on Trust. Backed by Proof. end -->
 
     <!-- Backed by Visionaries. start -->
-    <section id="backedbyvisionariessec">
+    <section id="backedbyvisionariessec" class="only-desktop">
         <div class="backedbyvisionariescont main-container">
             <div class="backedbyvisionariestext">
                 <h1>Led by a Pioneer. <br>
@@ -546,31 +612,43 @@
     <!-- ************************************** primus gallery design js code end ******************* -->
 
     <!-- tab -->
-     <script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-// Close the dropdown if the user clicks outside of it
-window.hover = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+        // Close the dropdown if the user clicks outside of it
+        window.hover = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- tab -->
 
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper code -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>
