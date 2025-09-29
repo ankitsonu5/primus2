@@ -5805,6 +5805,7 @@ figcaption {
   position: sticky;
   top: 0;
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .spinner-container {
@@ -6481,7 +6482,7 @@ figcaption {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: #4d4d4d;
-  background-image: url("https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67e5fa277d89851c01aff473_visualelectric-1742441839445.avif");
+  background-image: url("../assets/images/Home/mb/hero-banner-bg.png");
   background-position: 50% 0;
   background-size: cover;
   border-radius: 16px;
@@ -6498,36 +6499,14 @@ figcaption {
 }
 
 .s-card-image._002 {
-  background-image: url("https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67ff0cf2bae61b4dc15c67b2_bg-cloud-84.avif");
-  background-position: 50% 100%;
+  background-image: url("../assets/images/Home/mb/hero-banner-bg.png");
+  /* background-position: 50% 100%; */
 }
 
 .s-card-image._003 {
-  background-image: url("https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67f2897f4d93d2a7b9511473_bg-cloud-29.avif");
+  background-image: url("../assets/images/Home/mb/hero-banner-bg.png");
 }
 
-.s-card-content {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  color: var(--gray-30);
-  text-align: left;
-  background-color: #1b1b1b59;
-  border-radius: 18px;
-  flex-flow: row;
-  justify-content: center;
-  align-items: stretch;
-  width: auto;
-  max-width: 38em;
-  height: auto;
-  min-height: auto;
-  margin-left: 0;
-  margin-right: auto;
-  padding: 24px 32px 24px 24px;
-  display: flex;
-  position: relative;
-}
 
 .sub-col-right {
   background-color: var(--alice-blue\<deleted\|variable-1ec07d14\>);
@@ -7427,6 +7406,7 @@ figcaption {
 .page-wrapper {
   z-index: 6;
   position: relative;
+  /* margin-top: 3rem !important; */
 }
 
 .track-l-lp-02 {
@@ -7640,12 +7620,23 @@ figcaption {
 }
 
 .p-content {
-  grid-column-gap: 6px;
+  /* grid-column-gap: 6px;
   grid-row-gap: 6px;
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
-  display: flex;
+  display: flex; */
+
+font-family: Montserrat;
+font-style: Bold;
+font-size: 1.2rem;
+line-height: 40px;
+letter-spacing: -5%;
+color: #fff;
+}
+.p-content .p-m{
+  font-weight: 700;
+  font-size: 35px !important;
 }
 
 .p-image {
@@ -8747,7 +8738,7 @@ figcaption {
   }
 
   .s-card-image {
-    width: 80vw;
+    width: 95vw;
     padding-left: 30px;
     padding-right: 30px;
   }

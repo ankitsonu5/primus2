@@ -29,6 +29,8 @@
 html,
 body {
   height: 100%;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,12 +124,12 @@ body {
     padding: 3rem 0 5rem 0;
 }
 
-#activelivinglifesec .headingcont {
+ .headingcont {
     padding-bottom: 2rem;
     color: #801B53;
 }
 
-#activelivinglifesec .headingcont h1 {
+ .headingcont h1 {
     text-align: center;
     margin-bottom: 2rem;
     font-family: Montserrat;
@@ -138,18 +140,18 @@ body {
     letter-spacing: -5%;
 }
 
-#activelivinglifesec .opensecretsoflivingimgcont {
+ .opensecretsoflivingimgcont {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-between;
 }
 
-#activelivinglifesec .imgcontsec {
+ .imgcontsec {
     position: relative;
     border-radius: 2rem;
     overflow: hidden;
-    width: 18%;
+    width: 100%;
 }
 
 #activelivinglifesec .opensecretsoflivingimgcont img {
@@ -157,16 +159,18 @@ body {
     width: 100%;
 }
 
-#activelivinglifesec .imgcontsecgradient {
+ .imgcontsecgradient {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0.725) 100%);
     z-index: 1 !important;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
+    opacity: 0;
+    display: none;
 }
 
-#activelivinglifesec .imgcontsectext {
+ .imgcontsectext {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
@@ -175,7 +179,7 @@ body {
     overflow: hidden;
 }
 
-#activelivinglifesec .imgcontsectext h3 {
+ .imgcontsectext h3 {
     font-family: Montserrat;
     font-weight: 700;
     font-style: Bold;
@@ -185,7 +189,7 @@ body {
     transform: translateY(6rem);
     transition: all 0.3s;
 }
-#activelivinglifesec .imgcontsectext p {
+ .imgcontsectext p {
     font-family: lato;
     font-weight: 400;
     font-style: Bold;
@@ -196,10 +200,10 @@ body {
     transition: all 0.3s;
     min-height: 7.2rem;
 }
-#activelivinglifesec .imgcontsec:hover h3{
+ .imgcontsec:hover h3{
      transform: translateY(0);
 }
-#activelivinglifesec .imgcontsec:hover p{
+ .imgcontsec:hover p{
      transform: translateY(0);
 }
 /* Active living, built into every corner of your life style end */
@@ -644,6 +648,7 @@ body {
 /*  Built on Trust. Backed by Proof style start */
 #buildontrustbackbyproofsec {
   margin: 4rem 0;
+  overflow-x: hidden;
 }
 
 .buildontrustbackbyproofcont {
@@ -743,6 +748,7 @@ body {
 #backedbyvisionariessec {
   margin-top: 6rem;
   margin-bottom: 6rem;
+  overflow-x: hidden;
 }
 
 .backedbyvisionariestext h1 {
@@ -769,6 +775,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  padding: 7rem 0;
 }
 
 .backedbyvisionariesimg {
@@ -780,6 +787,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0;
 }
 
 .backedbyvisionariesimg img:first-child {
@@ -1019,6 +1027,7 @@ a {
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
+            margin-top: 2rem;
         }
 
         #mobilemenudesignsec .menu-header {
@@ -1174,6 +1183,17 @@ a {
 #mbactivelivinglifesec {
   margin-top: 10rem;
   padding: 0 1rem;
+}
+#mbactivelivinglifesec h1 {
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 30px;
+line-height: 35px;
+letter-spacing: -5%;
+text-align: center;
+color: #801B53;
+margin-bottom: 2rem;
 }
 #mbactivelivinglifesec .swiper {
   width: 100%;
@@ -1400,8 +1420,9 @@ a {
   height: 60vh;
 }
 
-.primusvideocont {
+#mbprimusvideosec .primusvideocont {
   width: 95% !important;
+  height: 50%;
 }
 
 /* mobile video gallery section style end */

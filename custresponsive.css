@@ -56,11 +56,21 @@
 
 
  /* ***************  breakdown point for other styles start *********************** */
+ @media screen and (min-width:1367px) and (max-width: 1919px ){
+      .tab {
+    padding: 10px 14px;
+}
+ }
  @media (max-width: 1366px) {
    #primusgallerydesignsec .gallery {
      padding: 0 1rem;
    }
-
+  #buildontrustbackbyproofsec {
+    padding: 0 1rem;
+  }
+  #backedbyvisionariessec {
+    /* padding: 0 1rem; */
+  }
    #activelivinglifesec .imgcontsectext p {
     transform: translateY(8.5rem);
     /* min-height: 4rem; */
@@ -181,7 +191,7 @@
    }
 
    .contgriddiv p {
-     font-size: 16px;
+     font-size: 18px;
    }
 
    .buildontrustbackbyproofcontgrid {
@@ -208,13 +218,16 @@
 
    .backedbyvisionariescont {
      margin: 0 1rem;
+     padding: 0 1rem;
    }
 
    .backedbyvisionariestext h1 {
      font-size: 42px;
      margin-bottom: 3rem;
    }
-
+   .h-l {
+  font-size: 2.4em;
+}
    .backedbyvisionariestext p {
      font-size: 1rem;
      line-height: 23px;
@@ -240,6 +253,10 @@
      font-size: 17px;
      line-height: 26px;
    }
+   .menu ul li a {
+    font-size: 11px !important;
+}
+
  }
 
  @media (max-width: 768px) {
@@ -352,7 +369,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 3rem 0 0 0;
+    padding: 4rem 0 4rem 0;
 }
   .footer-policy-sec {
   justify-self: flex-start;
@@ -365,12 +382,14 @@
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
-    .primusvideocont {
+    #mbprimusvideosec .primusvideocont {
     width: 90% !important;
+    height: 95vh;
     margin-bottom: 5rem;
     margin-top: 3rem;
+    overflow: hidden !important;
   }
-.primusvideocont {
+#mbprimusvideosec .primusvideocont {
     border-radius: 30px;
     background: none;
 }
@@ -389,7 +408,7 @@
     width: 100%;
     }
     #mbprimusvideosec .swiper-slider-cont video {
-    height: 92vh;
+    height: 76vh;
 }
 .buildontrustbackbyproofimg img {
         width: 93%;
@@ -425,6 +444,74 @@
     #mbactivelivinglifesec .swiper-slider-cont p {
     padding-right: 2rem;
 }
+ .contgriddiv p {
+     font-size: 14px;
+   }
+       .tabs {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .dd__item {
+    height: 3rem;
+    }
  }
-
+ @media (max-width: 425px) {
+  .p-content .p-m {
+    font-size: 32px !important;
+}
+    #mbactivelivinglifesec .swiper-slider-cont p{
+        padding-right: 1rem;
+    }
+    #mbactivelivinglifesec .swiper-slider-cont h2 {
+    margin-left: 1rem;
+}
+    #mbactivelivinglifesec .swiper-slider-cont p {
+    margin-left: 1rem;
+}
+#mobilemenudesignsec .menu-item {
+    font-size: 22px;
+}
+#mbactivelivinglifesec h1 {
+    font-size: 27px;
+}
+#mobileprimusglrydsgnsec .swiper-slider-cont h2 {
+    bottom: 9.5rem;
+    margin-left: 1rem;
+}
+    #mobileprimusglrydsgnsec .swiper-slider-cont p {
+        padding-right: 1rem;
+        margin-left: 1rem;
+        bottom: 5rem;
+    }
+    .footer-social-media {
+        gap: 1.5rem;
+    }
+    #mobileprimusdifferencesec .swiper-slide {
+    padding: 2rem 1rem;
+}
+#mobileprimusdifferencesec .div-auther-cont {
+    gap: 1rem;
+}
+#mobileprimusdifferencesec .swiper-slide img {
+    max-width: 80%;
+}
+.tab {
+    line-height: 24px;
+}
+ }
+ @media (max-width: 350px) {
+  #buildontrustbackbyproofsec {
+    margin: 4rem 0;
+    padding: 0 1rem;
+}
+  .footer-social-media {
+        gap: 1rem;
+    }
+        #mbactivelivinglifesec h1 {
+        font-size: 22px;
+    }
+        .contgriddiv p {
+        font-size: 12px !important;
+    } 
+ }
  /* ***************  breakdown point for other styles end *********************** */
