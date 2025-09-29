@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primus - About</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0823a66b46.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
@@ -18,11 +20,14 @@
         <section id="header" class="home-header">
             <div class="banner">
                 <div class="bannerimg">
-                    <img src="./assets/images/About/banner2.png" />
+                    <img class="bannerimgdesktop" src="./assets/images/About/banner2.png" />
+                    <img class="bannerimgmobile" src="./assets/images/About/aboutusmb.png" />
                 </div>
             </div>
             <div class="herobannerdwn">
-                <p>At Primus, we believe reimagining life begins at home. Homes where children learn from grandparents, parents stay close yet independent, and everyday living is filled with laughter, support, and togetherness.</p>
+                <p>At Primus, we believe reimagining life begins at home. Homes where children learn from grandparents,
+                    parents stay close yet independent, and everyday living is filled with laughter, support, and
+                    togetherness.</p>
                 <p>Independence and interdependence, designed to co-exist beautifully.</p>
             </div>
 
@@ -43,7 +48,7 @@
                 </div>
 
 
-                  <div class="enquiry-wrap">
+                <div class="enquiry-wrap">
                     <details class="enquiry">
                         <summary>
                             ENQUIRY
@@ -68,7 +73,8 @@
         <div class="howitbegincont main-container">
             <div class="howitbegintext">
                 <h1 class="primary-heading">How it all began</h1>
-                <p class="primary-para">It started with our founder Adarsh Narahari’s ajji. She wanted independence with dignity — and
+                <p class="primary-para">It started with our founder Adarsh Narahari’s ajji. She wanted independence with
+                    dignity — and
                     inspired Adarsh to study the best senior living communities worldwide. In 2013, that vision
                     became Primus: Indian homes where community and freedom thrive side by side.</p>
             </div>
@@ -81,7 +87,7 @@
     <!-- How it all begin section end -->
 
     <!-- Trusted & Recognised start -->
-    <section id="trustedrecognisedsec">
+    <section id="trustedrecognisedsec" class="only-desktop">
         <div class="trustedrecognisedcont main-container">
             <div class="trustedrecognisedtext">
                 <h1 class="primary-heading">Trusted & Recognised</h1>
@@ -118,6 +124,48 @@
     </section>
     <!-- Trusted & Recognised end -->
 
+    <!-- Mobile Trusted & Recognised start -->
+    <section id="mobiletrustedrecognisedsec" class="only-mobile">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="swiper-slider-cont">
+                            <img src="./assets/images/About/img-one.png" alt="">
+                            <div class="sectiontextdwn">
+                            <p>Most Outstanding Senior Living Housing <br> Developers in Asia</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="swiper-slider-cont">
+                            <img src="./assets/images/About/img-two.png" alt="">
+                            <div class="sectiontextdwn">
+                            <p>Most Outstanding Senior Living Housing <br> Developers in Asia</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="swiper-slider-cont">
+                            <img src="./assets/images/About/img-three.png" alt="">
+                            <div class="sectiontextdwn">
+                            <p>Most Outstanding Senior Living Housing <br> Developers in Asia</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination">
+
+            </div>
+        </div>
+    </section>
+    <!-- Mobile Trusted & Recognised end -->
+
     <!-- Why multigenerational living matters start -->
     <section id="multigenerationalsec" class="only-desktop">
         <div class="multigenerationalcont main-container">
@@ -144,8 +192,7 @@
     <!-- Why multigenerational living matters end -->
 
 
-
-        <!-- Mobile only Why multigenerational living matters start -->
+    <!-- Mobile only Why multigenerational living matters start -->
     <section id="multigenerationalsecmb" class="only-mobile">
         <div class="multigenerationalcontmb main-container">
             <div class="multigenerationalseconemb">
@@ -215,7 +262,7 @@
         </div>
     </section>
     <!-- Here's why it works end -->
-     
+
     <!-- What science tells us start -->
     <section id="whatsciencetellssec">
         <div class="whatsciencetells main-container">
@@ -246,7 +293,7 @@
     <!-- What science tells us end -->
 
     <!-- Open Secrets of Living Well start -->
-    <section id="opensecretsoflivingsec">
+    <section id="opensecretsoflivingsec" class="only-desktop">
         <div class="opensecretsoflivingcont main-container">
             <div class="headingcont">
                 <h1 class="primary-heading">Open Secrets of Living Well</h1>
@@ -290,44 +337,107 @@
     </section>
     <!-- Open Secrets of Living Well end -->
 
-<!-- The Primus Difference start -->
- <section id="theprimusdifferencesec">
-    <div class="theprimusdifferencecont main-container">
-        <div class="headingcontsec">
-            <h1 class="primary-heading">The Primus Difference</h1>
-            <p class="primary-para">We design for connection, not compromise.</p>
-        </div>
-        <div class="differencesdivcont">
-            <div class="differencesdivsec">
-                <div><img src="./assets/images/About/difference-icon-one.png" alt=""></div>
-                <p>Senior-friendly features<br> in every home.</p>
+    <!-- mobile Open Secrets of Living Well start -->
+    <section id="mbopensecretsoflivingsec" class="only-mobile">
+        <div class="opensecretsoflivingcont main-container">
+            <div class="headingcont">
+                <h1 class="primary-heading">Open Secrets of Living Well</h1>
             </div>
-            <div class="differencesdivsec">
-                <div><img src="./assets/images/About/difference-icon-two.png" alt=""></div>
-                <p>Hotel-like services: housekeeping,<br> health, dining, concierge, events.</p>
+<div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="imgcontsec">
+                    <img src="./assets/images/About/livingbg-one.png" alt="">
+                    <div class="imgcontsecgradient">
+                    </div>
+                    <div class="imgcontsectexts">
+                        <h3>Care for Yourself</h3>
+                        <p>Healthy meals, active neighbourhoods, mental wellness.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgcontsec">
+                    <img src="./assets/images/About/livingbg-two.png" alt="">
+                    <div class="imgcontsecgradient">
+                    </div>
+                    <div class="imgcontsectexts">
+                        <h3>Care for Yourself</h3>
+                        <p>Healthy meals, active neighbourhoods, mental wellness.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgcontsec">
+                    <img src="./assets/images/About/livingbg-three.png" alt="">
+                    <div class="imgcontsecgradient">
+                    </div>
+                    <div class="imgcontsectexts">
+                        <h3>Care for Yourself</h3>
+                        <p>Healthy meals, active neighbourhoods, mental wellness.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgcontsec">
+                    <img src="./assets/images/About/livingbg-four.png" alt="">
+                    <div class="imgcontsecgradient">
+                    </div>
+                    <div class="imgcontsectexts">
+                        <h3>Care for Yourself</h3>
+                        <p>Healthy meals, active neighbourhoods, mental wellness.</p>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="differencesdivsec">
-                <div><img src="./assets/images/About/difference-icon-three.png" alt=""></div>
-                <p>Safety and accessibility<br> built in by design.</p>
-            </div>
-        </div>
-    </div>
- </section>
-<!-- The Primus Difference end -->
+            <div class="swiper-pagination">
 
-<!-- Discover a new way to live, together start -->
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <!-- mobile Open Secrets of Living Well end -->
+
+    <!-- The Primus Difference start -->
+    <section id="theprimusdifferencesec">
+        <div class="theprimusdifferencecont main-container">
+            <div class="headingcontsec">
+                <h1 class="primary-heading">The Primus Difference</h1>
+                <p class="primary-para">We design for connection, not compromise.</p>
+            </div>
+            <div class="differencesdivcont">
+                <div class="differencesdivsec">
+                    <div><img src="./assets/images/About/difference-icon-one.png" alt=""></div>
+                    <p>Senior-friendly features<br> in every home.</p>
+                </div>
+                <div class="differencesdivsec">
+                    <div><img src="./assets/images/About/difference-icon-two.png" alt=""></div>
+                    <p>Hotel-like services: housekeeping,<br> health, dining, concierge, events.</p>
+                </div>
+                <div class="differencesdivsec">
+                    <div><img src="./assets/images/About/difference-icon-three.png" alt=""></div>
+                    <p>Safety and accessibility<br> built in by design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- The Primus Difference end -->
+
+    <!-- Discover a new way to live, together start -->
     <section id="discovernewwaytolivesec">
         <div class="discovernewwaytolivecont main-container">
             <div class="discovernewwaytextsec">
                 <h1 class="primary-heading">Discover a new way to live, together</h1>
-                <p class="primary-para">Because when generations live together with dignity, freedom, and purpose, everyone wins.</p>
+                <p class="primary-para">Because when generations live together with dignity, freedom, and purpose,
+                    everyone wins.</p>
             </div>
             <div class="discovernewwayimgsec">
                 <img src="./assets/images/About/discovernewwaybg.png" alt="">
             </div>
         </div>
     </section>
-<!-- Discover a new way to live, together end -->
+    <!-- Discover a new way to live, together end -->
 
     <!-- footer page design tab section start -->
     <footer id="footersec">
@@ -370,6 +480,20 @@
 
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper code -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 
 </body>
 
