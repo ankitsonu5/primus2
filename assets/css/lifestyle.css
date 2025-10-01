@@ -40,7 +40,7 @@
     font-weight: 700;
     font-style: Bold;
     font-size: 80px;
-    line-height: 75px;
+    line-height: 90px;
     letter-spacing: -5%;
     color: #801B53;
 
@@ -144,12 +144,12 @@
     font-size: 20px;
     line-height: 25px;
     color: #fff;
-    padding: 8px 25px;
+    padding: 20px 25px;
     text-align: center;
     background: #801B53;
     border: 1px solid #801B53;
     border-radius: 15px;
-    width: 185px;
+    width: 232px;
     cursor: pointer;
     margin-top: 35px;
 }
@@ -173,8 +173,8 @@
     font-family: Montserrat;
     font-weight: 700;
     font-style: Bold;
-    font-size: 67px;
-    line-height: 75px;
+    font-size: 70px;
+    line-height: 80px;
     letter-spacing: -5%;
     color: #801B53;
 }
@@ -183,7 +183,7 @@
     font-family: Lato;
     font-weight: 400;
     font-style: Regular;
-    font-size: 21px;
+    font-size: 22px;
     line-height: 25px;
     margin-top: 35px;
 }
@@ -240,8 +240,8 @@
     margin-bottom: 2rem;
     color: #fff;
     padding-right: 3rem;
-    font-size: 3.7rem;
-    line-height: 5rem;
+    font-size: 58px;
+    line-height: 88px;
 }
 
 #apeeksec .multigenerationalsecone p {
@@ -289,7 +289,7 @@
     font-weight: 700;
     font-style: Bold;
     font-size: 80px;
-    line-height: 75px;
+    line-height: 90px;
     letter-spacing: -5%;
     text-align: center;
     color: #801B53;
@@ -340,15 +340,10 @@
         color: #801B53;
     }
 
-    /* .everydayat {
-        font-family: Lato;
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 15px;
-        line-height: 20px;
-        padding-bottom: 14px;
-    } */
-
+    .everydayat p {
+    font-size: 22px;
+    line-height: 25px;
+}
     /*A day in life end*/
 
     /*Card start */
@@ -427,6 +422,8 @@
 
     /* Talk to us end*/
 
+    
+
     /*From festive start*/
     /* .fromfestive-img {
         width: 725px;
@@ -446,14 +443,14 @@
         color: #801B53;
     }
 
-    /* .fromfestive-txt p {
+    .fromfestive-txt p {
         font-family: Lato;
         font-weight: 400;
         font-style: Regular;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 22px;
+        line-height: 25px;
         margin-top: 30px;
-    } */
+    }
 
     /*From festive end*/
 
@@ -463,10 +460,15 @@
     }
 
     #apeeksec .multigenerationalsecone h1 {
-        font-size: 2.2rem;
-        line-height: 4rem;
+        font-size: 35px;
+        line-height: 50px;
     }
 
+    
+#apeeksec .multigenerationalsectwo .secboxdiv h3 {
+    font-size: 22px;
+    line-height: 30px;
+}
     #apeeksec .multigenerationalcont {
         align-items: center;
         padding: 0rem 0;
@@ -502,9 +504,9 @@
 
 @media screen and (max-width: 768px) {
 
-    #header-mobile {
+    /* .home-header {
         display: none;
-    }
+    } */
 
     #talk-to-us-mob {
         display: none;
@@ -513,15 +515,15 @@
 
     .banner {
         display: none;
-    }
+    } 
 
     .navbar {
         display: none;
     }
 
-    #footersec {
+    /* #footersec {
         display: none;
-    }
+    } */
 
     .main-container {
         padding-inline: 1rem;
@@ -1135,7 +1137,7 @@ color: white;
             line-height: 25px;
             text-align: left;
             margin-top: 15px;
-        }
+        } 
 
 
         /*Hear it from end*/

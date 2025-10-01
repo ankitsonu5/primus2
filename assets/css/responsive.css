@@ -339,6 +339,7 @@
 }
   .footer-policy-sec {
   justify-self: flex-start;
+  padding-left: 20px;
   }
     .footer-social-media {
         grid-column: auto;

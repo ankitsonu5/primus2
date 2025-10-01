@@ -823,6 +823,7 @@ a {
 
 .footer-about-us {
   justify-self: flex-start;
+  padding-left: 20px;
 }
 
 .footer-about-us ul li {
