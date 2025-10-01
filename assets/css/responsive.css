@@ -25,7 +25,7 @@
 
    /* already set, but explicit is fine */
    .navbar {
-     max-width: 1120px;
+     max-width: 1250px;
    }
  }
 
@@ -61,6 +61,14 @@
      padding: 0 1rem;
    }
 
+   #activelivinglifesec .imgcontsectext p {
+    transform: translateY(8.5rem);
+    /* min-height: 4rem; */
+}
+
+   #activelivinglifesec .imgcontsectext h3 {
+    font-size: 18px;
+   }
    .primusvideocontcontainer {
      padding: 2.5rem 3rem;
      display: flex;
@@ -131,7 +139,16 @@
      padding: 1rem 0rem;
      font-size: 0.8rem;
    }
-
+   #activelivinglifesec .opensecretsoflivingimgcont {
+    gap: 1rem;
+    justify-content: center;
+   }
+   #activelivinglifesec .imgcontsectext p {
+    font-size: 15px;
+   }
+       #activelivinglifesec .imgcontsectext h3 {
+        font-size: 15px;
+       }
    .slider-container {
      margin: 0 1rem;
    }
@@ -406,6 +423,9 @@
         font-weight: 900;
         border-radius: 4px;
     }
+    #mbactivelivinglifesec .swiper-slider-cont p {
+    padding-right: 2rem;
+}
  }
 
  /* ***************  breakdown point for other styles end *********************** */
